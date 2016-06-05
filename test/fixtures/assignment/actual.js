@@ -1,6 +1,6 @@
 var assert;
 assert = require("assert");
 
-var add = function (x) {
-  assert(x === 1);
+var compare = function (x) {
+  assert.deepStrictEqual(x, { name: "foo" });
 };

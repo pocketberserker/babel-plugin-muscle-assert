@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "babel-plugin-empower-assert",
+    "../../../src/",
+    [
+      "babel-plugin-espower",
+      {
+        "embedAst": true,
+        "patterns": [
+        ]
+      }
+    ]
+  ]
+}

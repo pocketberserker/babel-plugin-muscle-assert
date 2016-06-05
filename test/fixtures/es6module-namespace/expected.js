@@ -1,5 +1,7 @@
-import * as assert from "muscle-assert";
+const muscle = require("muscle-assert");
 
-const add = function (x) {
-  assert(x === 1);
+import * as assert from "assert";
+
+const compare = function (x) {
+  muscle.deepStrictEqual(x, { name: "foo" });
 };

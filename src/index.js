@@ -48,9 +48,7 @@ module.exports = function ({types: t}) {
           }
           var callee = right.get("callee");
           var arg = right.get("arguments")[0];
-          if (isRequireBaseAssert(callee, arg)) {
-            arg.set("value", "muscle-assert");
-          } else if (isRequirePowerAssert(callee, arg)) {
+          if (isRequireBaseAssert(callee, arg) || isRequirePowerAssert(callee, arg)) {
             addAssertImport(state.file);
             state.set("__AUTO_IMPORT_MUSCLE_ASSERT", true)
           }
@@ -71,9 +69,7 @@ module.exports = function ({types: t}) {
           }
           var callee = init.get("callee");
           var arg = init.get("arguments")[0];
-          if (isRequireBaseAssert(callee, arg)) {
-            arg.set("value", "muscle-assert");
-          } else if (isRequirePowerAssert(callee, arg)) {
+          if (isRequireBaseAssert(callee, arg) || isRequirePowerAssert(callee, arg)) {
             addAssertImport(state.file);
             state.set("__AUTO_IMPORT_MUSCLE_ASSERT", true)
           }
@@ -98,7 +94,8 @@ module.exports = function ({types: t}) {
           if (!(local.equals("name", "assert"))) {
             return;
           }
-          source.set("value", "muscle-assert");
+          addAssertImport(state.file);
+          state.set("__AUTO_IMPORT_MUSCLE_ASSERT", true)
         }
       },
       CallExpression: {

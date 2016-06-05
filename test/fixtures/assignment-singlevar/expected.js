@@ -1,6 +1,8 @@
-var add, assert;
-assert = require("muscle-assert");
+const muscle = require("muscle-assert");
 
-add = function (x) {
-  assert(x === 1);
+var compare, assert;
+assert = require("assert");
+
+compare = function (x) {
+  muscle.deepStrictEqual(x, { name: "foo" });
 };
