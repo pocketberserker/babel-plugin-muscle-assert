@@ -1,7 +1,7 @@
 {
   "name": "babel-plugin-muscle-assert",
   "description": "babel plugin to convert assert to muscle-assert at compile time.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "pocketberserker",
     "email": "pocketberserker@gmail.com",
