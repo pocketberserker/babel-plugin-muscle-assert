@@ -2,5 +2,5 @@ var compare, assert;
 assert = require("assert");
 
 compare = function (x) {
-  muscle.deepStrictEqual(x, { name: "foo" });
+  assert.deepStrictEqual(x, { name: "foo" });
 };
